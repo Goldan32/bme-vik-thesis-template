@@ -1,0 +1,36 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+\input{include/packages}
+
+\newcommand{\vikszerzoVezeteknev}{Gipsz}
+\newcommand{\vikszerzoKeresztnev}{Jakab}
+
+\newcommand{\vikcim}{Elektronikus terelők} % Cím
+\newcommand{\viktanszek}{\bmemit} % Tanszék
+\newcommand{\vikdoktipus}{\bsc} % Dokumentum típusa (\bsc vagy \msc)
+\newcommand{\vikmunkatipusat}{szakdolgozatot} % a "hallgató nyilatkozat" részhez: szakdolgozatot vagy diplomatervet
+
+\input{include/tdk-variables}
+\newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev} % egy szerző esetén
+
+\input{include/thesis-en}
+\input{include/preamble}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\include{include/guideline}
+\include{include/project}
+
+\selectthesislanguage
+
+\pagenumbering{arabic}
+
+\include{content/example/thesis-format}
+\include{content/example/template-usage}
+
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{bib/example}
+
+\end{document}
